@@ -1,6 +1,10 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
-    providers: null
+    providers:
+        users_in_memory:
+            memory:
+                users:
+                    testuser: { password: '123', roles: ['ROLE_ADMIN'] }
         
     firewalls:
         dev:
